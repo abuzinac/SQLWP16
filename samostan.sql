@@ -14,7 +14,7 @@ sifra int not null primary key auto_increment,
 ime varchar(50) not null,
 prezime varchar(50) not null,
 samostan int not null,
-nadredjen varchar(50) not null
+nadredjensifra int not null
 );
 
 create table posao(
@@ -30,6 +30,7 @@ svecenik int not null
 );
 
 alter table svecenik add foreign key (samostan) references samostan(sifra);
+alter table svecenik add foreign key (nadredjensifra) references svecenik(sifra);
 
 alter table svec_posao add foreign key (svecenik) references svecenik(sifra);
 alter table svec_posao add foreign key (posao) references posao(sifra);
