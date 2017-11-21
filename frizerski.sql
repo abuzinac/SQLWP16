@@ -1,5 +1,5 @@
 drop database if exists frizerski_salon;
-create database frizerski_salon;
+create database frizerski_salon character set utf8 collate utf8_croatian_ci;
 
 use frizerski_salon;
 
@@ -38,3 +38,13 @@ spol boolean
  alter table posjeta add foreign key (djelatnica) references djelatnica(sifra);
  alter table posjeta add foreign key (korisnik) references korisnik(sifra);
  alter table posjeta add foreign key (usluga) references usluga(sifra);
+ 
+ insert into salon (sifra,naziv) value
+ (null,'Lotus'),
+ (null,'Cvrcak'),
+ (null,'Žirafa');
+ 
+ insert into djelatnica (sifra,ime,prezime,salon) value
+ (null,'Marija','Maras',2),
+ (null,'Kristina','Ljubic',1),
+ (null,'Ana','Lovric',2);
