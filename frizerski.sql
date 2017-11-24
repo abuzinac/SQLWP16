@@ -1,5 +1,5 @@
 drop database if exists frizerski_salon;
-create database frizerski_salon character set utf8 collate utf8_croatian_ci;
+create database frizerski_salon character set utf8;
 
 use frizerski_salon;
 
