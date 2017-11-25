@@ -56,4 +56,10 @@ alter table kontakt_obrazac add foreign key (korisnik) references korisnik(sifra
 
 
 insert into korisnik (ime,prezime,email,datum_rodjenja,spol) values
-  ('Andrija','Buzinac','abuzinac@gmail.com',1987-6-4,1);
+  ('Andrija','Buzinac','abuzinac@gmail.com','1987-6-4',1);
+
+insert into prijavnica (korisnik) values
+  (1);
+
+insert into clan (korisnicko_ime,lozinka,korisnik) values
+  ('buzo','0000',1);
